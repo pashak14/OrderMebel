@@ -150,7 +150,8 @@ function ordermebel_scripts() {
 	wp_style_add_data( 'ordermebel-style', 'rtl', 'replace' );
 	
 
-	wp_enqueue_script( 'ordermebel-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'ordermebel-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'ordermebel-main', get_template_directory_uri() . '/assets/js/script.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'ordermebel-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'ordermebel-bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), _S_VERSION, true );
 
@@ -178,7 +179,7 @@ require get_template_directory() . '/inc/template-functions.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/option-panel.php';
 
 /**
  * Load Jetpack compatibility file.

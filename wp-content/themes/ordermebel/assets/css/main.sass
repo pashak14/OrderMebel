@@ -1,3 +1,247 @@
+/* ########## Variables ########## */
+    
+$bg-color: #EFD2BA;
+$header-color: #8A3F00;
+$button-gradient: linear-gradient(180deg, #F1A86B 0%, #D97F2B 100%);
+$input-bg-color: #FFD480;
+$white-text: #FFFFFF;
+$black-text: #000000;
+$bg-card: #EC9F5E;
+$text-hover: gray;
+
+/* ##########   Code   ########## */
+
 * 
     padding: 0
     margin: 0
+    font-family: Montserrat
+
+body 
+    background-color: $bg-color !important
+
+p, ul
+    margin-bottom: 0 !important
+
+a, a:active
+    text-decoration: none !important
+
+.preloader 
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: $bg-color
+    z-index: 9999
+    transition: .5s all linear
+    opacity: 1
+    visibility: visible
+    display: flex
+    justify-content: center
+    align-items: center
+
+.preloader .loader 
+    width: 110px
+    height: 110px
+    border: 4px solid white
+    border-radius: 50%
+    border-top-color: $header-color
+    border-top-width: 5px
+    animation: 2s spin infinite linear
+
+@keyframes spin 
+    from
+        transform: rotate(0deg)
+  
+    to
+        transform: rotate(360deg)
+
+.done 
+    opacity: 0
+    visibility: hidden
+
+header 
+    height: 108px
+    background-color: $header-color
+    color: $white-text
+    font-size: 20px
+
+    *
+        color: $white-text
+        align-items: center
+
+    .telephone a 
+        color: $white-text
+
+    .telephone a:hover
+        color: $text-hover !important
+        transition: all .2s linear
+
+.menu__items 
+    display: flex
+    list-style: none
+
+    li a
+        display: flex
+        color: $white-text
+
+    li a:hover
+        color: $text-hover !important
+        transition: all .2s linear
+
+#first__screen
+    margin-top: 100px 
+    background-image: url(../img/first_disp.png)
+    background-position-x: 50px
+    background-repeat: no-repeat
+    height: 100vh
+
+    * 
+        color: $black-text
+
+    .first__screen 
+        text-align: right
+        max-width: 490px
+        margin-top: 100px
+        
+    .header 
+        font-weight: bold
+        font-size: 58px
+        line-height: 71px
+        text-align: right
+        max-width: 490px
+
+    .body 
+        font-size: 24px
+        margin-top: 40px
+
+    .button 
+        margin-top: 40px
+        background: $button-gradient
+        border: none
+        padding: 23px 32px
+        border-radius: 30px
+        font-weight: bold
+        a
+            color: $white-text !important
+        font-size: 24px
+        outline: none
+
+#second__screen
+    margin-top: 45px
+    height: 100%
+
+    .carousel 
+        margin-top: 80px
+
+    .carousel-inner 
+        border-radius: 31px
+        max-height: 620px
+
+    .carousel-control-prev-icon 
+        background-image: url("../img/arrow-right.svg")
+        transform: scale(-1, 1)
+    
+    .carousel-control-next-icon 
+        background-image: url("../img/arrow-right.svg")
+    
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon 
+        width: 23px
+        height: 38px
+
+.header__text 
+    font-size: 40px
+    text-align: center
+    color: $black-text
+    margin-top: 150px
+    margin-bottom: 80px
+
+#thirty__screen 
+
+    height: 100%
+
+    .cards 
+        margin-top: 80px
+    
+    .card 
+        background-color: $bg-card
+        border-radius: 22px
+        border: none
+        width: 25%
+        padding: 15px 20px
+
+        .card-title 
+            color: $white-text
+            font-size: 18px
+    
+    .card:nth-last-of-type(1)
+        .card-text
+            font-size: 18px
+
+    .card:nth-last-of-type(2)
+        .card-text
+            font-size: 15px
+    
+    .card:nth-last-of-type(3)
+        .card-text
+            font-size: 15px
+
+    .card:nth-last-of-type(4)
+        .card-text
+            font-size: 17px
+
+#fourty__screen 
+    height: 100%
+
+    .bottom__block
+        margin-top: 109px
+
+        .form
+            .form-control 
+                padding: 26px 26px 26px 43px
+                border-radius: 40.5px
+                background-color: $input-bg-color
+                height: auto
+                font-size: 24px
+                border: none  
+                outline: none        
+      
+            .button 
+                background: $button-gradient
+                border: none
+                padding: 23px 32px
+                border-radius: 50px
+                font-weight: bold
+                font-size: 24px
+                color: $white-text
+                float: right
+
+        .white__block 
+            min-height: 100% 
+            padding: 30px 60px
+            color: $black-text 
+            background-color: $white-text
+            border-radius: 50px 
+            font-size: 24px 
+
+            li 
+                margin-bottom: 15px
+            
+footer 
+    margin-top: 150px
+    height: 110px
+    background-color: $header-color
+    color: $white-text
+    font-size: 20px
+
+    *
+        color: $white-text  
+        align-items: center
+
+    .telephone a 
+        color: $white-text
+
+    .telephone a:hover
+        color: $text-hover !important
+        transition: all .2s linear
