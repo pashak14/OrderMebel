@@ -60,22 +60,74 @@ a, a:active
     opacity: 0
     visibility: hidden
 
+.openclose 
+    height: 260px !important
+    width: 100%
+    flex-wrap: wrap
+    z-index: 100
+    padding-top: 10px
+
+    .menu__items 
+        flex-direction: column
+        text-align: center
+
+
 header 
-    height: 108px
+    height: 100px
     background-color: $header-color
     color: $white-text
     font-size: 20px
+    transition: all .2s linear
+    padding-top: 10px
 
     *
         color: $white-text
         align-items: center
 
-    .telephone a 
-        color: $white-text
+    .ham
+        cursor: pointer
+        transition: transform 400ms
+        user-select: none
 
-    .telephone a:hover
-        color: $text-hover !important
-        transition: all .2s linear
+    .hamRotate.active
+        transform: rotate(45deg)
+
+    .hamRotate180.active
+        transform: rotate(180deg)
+
+    .line
+        fill: none
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms
+        stroke: $white-text
+        stroke-width: 3.5
+        stroke-linecap: round
+
+    .ham6
+        .top
+            stroke-dasharray: 40 172
+
+        .middle
+            stroke-dasharray: 40 111
+
+        .bottom
+            stroke-dasharray: 40 172
+
+        &.active
+            .top
+                stroke-dashoffset: -132px
+
+            .middle
+                stroke-dashoffset: -71px
+
+            .bottom
+                stroke-dashoffset: -132px
+
+.telephone a 
+    color: $white-text
+    transition: all .2s linear
+
+.telephone a:hover
+    color: $text-hover !important
 
 .menu__items 
     display: flex
@@ -84,31 +136,49 @@ header
     li a
         display: flex
         color: $white-text
+        transition: all .2s linear
 
     li a:hover
         color: $text-hover !important
-        transition: all .2s linear
 
-#first__screen
-    margin-top: 100px 
-    background-image: url(../img/first_disp.png)
-    background-position-x: 50px
-    background-repeat: no-repeat
+#first__screen 
     height: 100vh
+    background-color: black
+    position: relative
 
     * 
-        color: $black-text
+        color: $white-text
+
+    .bg 
+        position: absolute
+        width: 100%
+        height: 100%
+
+        .bg__first_screen
+            width: 100%
+            height: 100%
+            z-index: -1
+            object-fit: cover
+
+    .bg::after 
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.75)
+        opacity: 0.6
 
     .first__screen 
-        text-align: right
         max-width: 490px
-        margin-top: 100px
         
     .header 
         font-weight: bold
-        font-size: 58px
+        font-size: 60px
         line-height: 71px
-        text-align: right
         max-width: 490px
 
     .body 
@@ -124,8 +194,15 @@ header
         font-weight: bold
         a
             color: $white-text !important
-        font-size: 24px
-        outline: none
+            font-size: 24px
+            outline: none
+
+.button 
+    transition: all .2s linear
+
+.button:hover 
+    box-shadow: 3px 4px 15px $bg-card
+    
 
 #second__screen
     margin-top: 45px
@@ -163,12 +240,13 @@ header
 
     .cards 
         margin-top: 80px
+        flex-wrap: wrap
     
     .card 
         background-color: $bg-card
         border-radius: 22px
         border: none
-        width: 25%
+        width: 23%
         padding: 15px 20px
 
         .card-title 
@@ -239,9 +317,27 @@ footer
         color: $white-text  
         align-items: center
 
-    .telephone a 
-        color: $white-text
+@media screen and (max-width: 1200px) 
+    .my-col-lg-6 
+        width: 47% !important
 
-    .telephone a:hover
-        color: $text-hover !important
-        transition: all .2s linear
+@media screen and (max-width: 768px)
+    .my-col-md-12
+        width: 98% !important
+
+@media screen and (max-width: 540px)
+    #first__screen
+        .header
+            font-size: 36px
+            line-height: 44px
+            text-align: center
+        .body 
+            text-align: center
+
+        .button 
+            margin-left: 105px
+
+@media screen and (max-width: 415px)
+    #first__screen
+        .button 
+            margin-left: 50px

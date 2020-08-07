@@ -151,9 +151,8 @@ function ordermebel_scripts() {
 	
 
 	wp_enqueue_script( 'ordermebel-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'ordermebel-main', get_template_directory_uri() . '/assets/js/script.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'ordermebel-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'ordermebel-bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'ordermebel-main', get_template_directory_uri() . '/assets/js/script.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

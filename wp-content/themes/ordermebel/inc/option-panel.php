@@ -96,10 +96,10 @@ $args = array(
 	'allow_sub_menu'            => true,
 
 	// The text to appear in the admin menu.
-	'menu_title'                => esc_html__( 'Sample Options', 'your-textdomain-here' ),
+	'menu_title'                => esc_html__( 'Опции', 'your-textdomain-here' ),
 
 	// The text to appear on the page title.
-	'page_title'                => esc_html__( 'Sample Options', 'your-textdomain-here' ),
+	'page_title'                => esc_html__( 'Опции', 'your-textdomain-here' ),
 
 	// Enabled the Webfonts typography module to use asynchronous fonts.
 	'async_typography'          => true,
@@ -302,30 +302,28 @@ Redux::set_section(
 		'id'               => 'basic',
 		'desc'             => esc_html__( 'Здесь вы сможете редактировать основные поля', 'your-textdomain-here' ),
 		'customizer_width' => '400px',
-		'icon'             => 'el el-home',
+		'icon'             => 'el el-cogs',
 	)
 );
 
-require_once Redux_Core::$dir . '../sample/sections/basic-fields/header.php';
-require_once Redux_Core::$dir . '../sample/sections/basic-fields/first_screen.php';
-require_once Redux_Core::$dir . '../sample/sections/basic-fields/second_screen.php';
-require_once Redux_Core::$dir . '../sample/sections/basic-fields/thirty_screen.php';
-require_once Redux_Core::$dir . '../sample/sections/basic-fields/fourty_screen.php';
-require_once Redux_Core::$dir . '../sample/sections/basic-fields/footer.php';
+require_once Redux_Core::$dir . '../../../themes/ordermebel/inc/sample/sections/basic-fields/header.php';
+require_once Redux_Core::$dir . '../../../themes/ordermebel/inc/sample/sections/basic-fields/footer.php';
 
 // -> START Editors.
 Redux::set_section(
 	$opt_name,
 	array(
-		'title'            => esc_html__( 'Editors', 'your-textdomain-here' ),
+		'title'            => esc_html__( 'Главная страница', 'your-textdomain-here' ),
 		'id'               => 'editor',
 		'customizer_width' => '500px',
-		'icon'             => 'el el-edit',
+		'icon'             => 'el el-home',
 	)
 );
 
-require_once Redux_Core::$dir . '../sample/sections/editors/wordpress-editor.php';
-require_once Redux_Core::$dir . '../sample/sections/editors/ace-editor.php';
+require_once Redux_Core::$dir . '../../../themes/ordermebel/inc/sample/sections/index-page/first_screen.php';
+require_once Redux_Core::$dir . '../../../themes/ordermebel/inc/sample/sections/index-page/second_screen.php';
+require_once Redux_Core::$dir . '../../../themes/ordermebel/inc/sample/sections/index-page/thirty_screen.php';
+require_once Redux_Core::$dir . '../../../themes/ordermebel/inc/sample/sections/index-page/fourty_screen.php';
 
 // -> START Color Selection.
 Redux::set_section(

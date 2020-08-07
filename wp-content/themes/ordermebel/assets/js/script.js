@@ -1,6 +1,6 @@
 $(window).on("load", function () {
   setTimeout(function () {
-    var preloader = document.getElementById("page-preloader");
+    let preloader = document.getElementById("page-preloader");
     if (!preloader.classList.contains("done")) {
       preloader.classList.add("done");
     }
@@ -20,4 +20,13 @@ $(window).on("load", function () {
       });
     }
   }
+
+  var menu = document.querySelector(".menu__burger");
+  var openMenu = document.querySelector("header");
+  var opens = document.querySelector(".menush");
+
+  menu.addEventListener("click", function () {
+    openMenu.classList.toggle("openclose");
+    opens.classList.toggle("d-flex");
+  });
 });
